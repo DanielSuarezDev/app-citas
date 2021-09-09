@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import {v4 as uuid} from 'uuid'
 
-export const Formulario = () => {
+export const Formulario = ({crearCita}) => {
   const [cita, setCita] = useState({
     mascota: "",
     propietario: "",
@@ -32,19 +33,30 @@ export const Formulario = () => {
       setError(true)
       return;
     }
-
+    // eliminar mensaje previo
+    setError(false)
    
     // asignar ID
+    cita.id = uuid()
 
-    // Crear cita
+    // Crear 
+    crearCita(cita)
 
     // Reiniciar Form
+
+    setCita({
+      mascota: "",
+      propietario: "",
+      fecha: "",
+      hora: "",
+      sintomas: "",
+    });
   };
   return (
     <div>
       <h2>Crear Cita</h2>
 
-        {error ? <p className='alerta-error'>[prueba]Todos los campos son obligatorios</p>: null}
+        {error ? <p className='alerta-error'>Todos los campos son obligatorios</p>: null}
 
       <form onSubmit={handleSubmit}>
         <label>Nombre Mascota</label>
