@@ -44,7 +44,7 @@ export const Formulario = () => {
     <div>
       <h2>Crear Cita</h2>
 
-        {error ? <p className='alerta-error'>Todos los campos son obligatorios</p>: null}
+        {error ? <p className='alerta-error'>[prueba]Todos los campos son obligatorios</p>: null}
 
       <form onSubmit={handleSubmit}>
         <label>Nombre Mascota</label>
