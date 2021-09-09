@@ -21,7 +21,7 @@ function App() {
     setCitas(nuevasCitas)
   };
 
-  const title = citas.length === 0  ? <h1>Agrega una cita</h1> : <h1>Administra tus citas</h1>
+  const title = citas.length === 0  ? '' : <h1>Tu Agenda</h1>
  
   useEffect(() => {
     if(citasIniciales){
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Administrador de tareas</h1>
+      <h1>Tu Cita</h1>
       <div className="container">
         <div className="row">
           <div className="one-half column">

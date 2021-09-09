@@ -54,7 +54,7 @@ export const Formulario = ({crearCita}) => {
   };
   return (
     <div>
-      <h2>Crear Cita</h2>
+      <h2>Agendar</h2>
 
         {error ? <p className='alerta-error'>Todos los campos son obligatorios</p>: null}
 
@@ -69,7 +69,7 @@ export const Formulario = ({crearCita}) => {
           value={mascota}
         />
 
-        <label>Nombre Dueño</label>
+        <label>Acompañante</label>
         <input
           type="text"
           name="propietario"

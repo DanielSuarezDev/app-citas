@@ -12,6 +12,6 @@ export const Cita = ({ cita, handleDelete }) => (
      className='button eliminar u-full-width'
     onClick={() => handleDelete(cita.id)}
      >
-        Eliminar &times</button>
+        Eliminar</button>
   </div>
 );
