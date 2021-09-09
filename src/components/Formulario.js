@@ -44,7 +44,7 @@ export const Formulario = () => {
     <div>
       <h2>Crear Cita</h2>
 
-        {error ? <p className='alerta-error'>Faltan campos por diligenciar</p>: null}
+        {error ? <p className='alerta-error'>Verifica los campos</p>: null}
 
       <form onSubmit={handleSubmit}>
         <label>Nombre Mascota</label>
