@@ -29,7 +29,7 @@ function App() {
     }else {
       localStorage.setItem('citas', JSON.stringify([]))
     }
-  }, [citas])
+  }, [citas, citasIniciales])
 
   return (
     <div className="App">
