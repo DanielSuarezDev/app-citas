@@ -23,9 +23,9 @@ export const Formulario = () => {
     e.preventDefault();
     // validar
     if (
-      mascota.trim() === "" ||
-      propietario.trim() === "" ||
-      fecha.trim() === "" ||
+      mascota.trim() === " " ||
+      propietario.trim() === " " ||
+      fecha.trim() === " " ||
       hora.trim() === "" ||
       sintomas.trim() === ""
     ) {
@@ -44,7 +44,7 @@ export const Formulario = () => {
     <div>
       <h2>Crear Cita</h2>
 
-        {error ? <p className='alerta-error'>Todos los campos son obligatorios</p>: null}
+        {error ? <p className='alerta-error'>Faltan campos por diligenciar</p>: null}
 
       <form onSubmit={handleSubmit}>
         <label>Nombre Mascota</label>
